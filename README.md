@@ -2,17 +2,9 @@
 
 # 🔐 KALLIE
 ```
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║           UNIVERSIDAD AUTÓNOMA DE AGUASCALIENTES             ║
-║                                                              ║
-║                  CENTRO DE CIENCIAS BÁSICAS                  ║
-║                                                              ║
-║                   SEGURIDAD EN SISTEMAS                      ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
 ```
-
+## UNIVERSIDAD AUTONOMA DE AGUASCALIENTES
+### CENTRO DE CIENCIAS BASICAS 
 ---
 
 ## 📋 TEMA
@@ -43,16 +35,6 @@ Semestre **8°** — Grupo **"B"**
 ## 📅 FECHA
 
 **20 de Febrero del 2026, Aguascalientes, Ags.**
-
----
-```
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║      Sistema de Cifrado y Descifrado — César & Atbash        ║
-║                   Basado en código ASCII                     ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-```
 
 </div>
 
