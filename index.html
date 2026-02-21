@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kallie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo-line">
+      <div class="line"></div>
+      <h1>Kallie</h1>
+      <div class="line"></div>
+    </div>
+    <p class="subtitle">Sistema de Cifrado &amp; Descifrado — ASCII</p>
+    <div class="method-badge caesar" id="modeBadge">
+      <span class="dot"></span>
+      <span id="badgeText">Módulo: César</span>
+    </div>
+  </header>
+
+  <!-- Method selector -->
+  <div class="card">
+    <p class="card-title">✦ Selección de Método</p>
+    <div class="method-selector">
+      <button class="method-btn caesar-btn active" onclick="setMethod('caesar')" id="btnCaesar">
+        <span class="method-name">César</span>
+        <span class="method-desc">Desplazamiento de N posiciones en el conjunto de caracteres usando aritmética modular.</span>
+      </button>
+      <button class="method-btn atbash-btn" onclick="setMethod('atbash')" id="btnAtbash">
+        <span class="method-name">Atbash</span>
+        <span class="method-desc">Inversión especular: el primer carácter ↔ último. El índice i ↔ (n-1-i).</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Configuration -->
+  <div class="card">
+    <p class="card-title">✦ Configuración del Módulo</p>
+
+    <div class="field-group">
+      <label>Conjunto de caracteres (base para cifrado)</label>
+      <input type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,;:!?-_"
+        oninput="updateInfo()">
+      <div style="margin-top:6px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:0.6rem;color:var(--text-dim)">Caracteres fuera del conjunto se mantienen intactos</span>
+        <label class="ascii-toggle" onclick="toggleAscii()">
+          <div class="toggle-switch" id="asciiToggle"></div>
+          <span>Modo ASCII completo (32–126)</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- César shift -->
+    <div class="field-group" id="shiftGroup">
+      <label>Desplazamiento (módulo = <span id="modLabel">?</span>)</label>
+      <div class="shift-control">
+        <button class="shift-btn" onclick="changeShift(-1)">−</button>
+        <div class="shift-display" id="shiftDisplay">3</div>
+        <button class="shift-btn" onclick="changeShift(1)">+</button>
+        <input type="range" id="shiftRange" min="1" max="100" value="3"
+          oninput="syncShift(this.value)"
+          style="flex:2;accent-color:var(--accent);">
+      </div>
+    </div>
+
+    <!-- Mapping preview -->
+    <div class="field-group">
+      <label>Vista previa de mapeo <span style="font-size:0.55rem;color:var(--text-dim)">(original → cifrado)</span></label>
+      <div class="mapping-preview" id="mappingPreview"></div>
+    </div>
+  </div>
+
+  <!-- Input/Output -->
+  <div class="card">
+    <p class="card-title">✦ Texto</p>
+
+    <div class="field-group">
+      <label>Texto de entrada</label>
+      <textarea id="inputText" placeholder="Escribe o pega tu mensaje aquí…"></textarea>
+    </div>
+
+    <div class="actions">
+      <button class="action-btn btn-encrypt" onclick="process('encrypt')">⬆ Cifrar</button>
+      <button class="action-btn btn-decrypt" onclick="process('decrypt')">⬇ Descifrar</button>
+      <button class="action-btn btn-clear" onclick="clearAll()">✕ Limpiar</button>
+    </div>
+
+    <div class="field-group">
+      <label>Resultado</label>
+      <div class="output-box" id="outputBox">
+        <button class="copy-btn" onclick="copyResult()">Copiar</button>
+        <span id="outputText" style="display:block;min-height:40px;"></span>
+      </div>
+    </div>
+
+    <!-- Info pills -->
+    <div class="info-grid">
+      <div class="info-pill">
+        <div class="pill-label">Método activo</div>
+        <div class="pill-value" id="infoMethod">César (shift: 3)</div>
+      </div>
+      <div class="info-pill">
+        <div class="pill-label">Tamaño del conjunto</div>
+        <div class="pill-value" id="infoCharset">— caracteres</div>
+      </div>
+      <div class="info-pill">
+        <div class="pill-label">Módulo aritmético</div>
+        <div class="pill-value" id="infoMod">—</div>
+      </div>
+      <div class="info-pill">
+        <div class="pill-label">Última operación</div>
+        <div class="pill-value" id="infoOp">—</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>kallie · ASCII-Based Encryption · César &amp; Atbash</footer>
+</div>
+
+<div class="notif" id="notif"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
