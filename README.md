@@ -1,8 +1,6 @@
-# 🔐 KALLIE
-
 <div align="center">
 
----
+# 🔐 KALLIE
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
@@ -32,9 +30,7 @@
 
 **ING. EN SISTEMAS COMPUTACIONALES**
 
-| Semestre | Grupo |
-|:---:|:---:|
-| 8° | "B" |
+Semestre **8°** — Grupo **"B"**
 
 ---
 
@@ -66,30 +62,29 @@
 
 # 📑 ÍNDICE
 
-| Sección | Descripción | |
-|---|---|:---:|
-
-| 1 | [Introducción](#-1-introducción) | |
-| 2 | [Objetivo](#-2-objetivo) | |
-| 3 | [Desarrollo](#-3-desarrollo) | |
-| 3.1 | [Documentación del programa](#31-documentación-del-programa-segura) | |
-| 3.1.1 | [Variables de estado](#variables-de-estado) | |
-| 3.1.2 | [getCharset() — Conjunto de caracteres](#getcharset----obtener-el-conjunto-de-caracteres) | |
-| 3.1.3 | [caesarChar() — Cifrado César](#caesarchar----cifrado-césar-carácter-por-carácter) | |
-| 3.1.4 | [atbashChar() — Cifrado Atbash](#atbashchar----cifrado-atbash-carácter-por-carácter) | |
-| 3.1.5 | [process() — Procesar texto](#process----procesar-el-texto-completo) | |
-| 3.1.6 | [updateMapping() — Vista previa](#updatemapping----vista-previa-del-mapeo) | |
-| 3.1.7 | [setMethod() — Cambiar método](#setmethod----cambiar-entre-césar-y-atbash) | |
-| 3.1.8 | [toggleAscii() — Modo ASCII](#toggleascii----modo-ascii-completo) | |
-| 3.1.9 | [index.html — Estructura](#indexhtml----estructura) | |
-| 3.1.10 | [styles.css — Diseño](#stylescss----diseño) | |
-| 3.2 | [Programa web Kallie funcionando](#32-programa-web--kallie) | |
-| 3.2.1 | [Descripción funcional](#321-descripción-funcional) | |
-| 3.2.2 | [Algoritmos matemáticos](#322-algoritmos-matemáticos) | |
-| 3.2.3 | [Instrucciones de uso](#323-cómo-usar-kallie) | |
-| 3.2.4 | [Ejecución local](#324-cómo-ejecutar-localmente) | |
-| 4 | [Conclusión](#-4-conclusión) | |
-| 5 | [Bibliografía](#-5-bibliografía) | |
+| Sección | Descripción |
+|:---:|---|
+| 1 | [Introducción](#-1-introducción) |
+| 2 | [Objetivo](#-2-objetivo) |
+| 3 | [Desarrollo](#️-3-desarrollo) |
+| 3.1 | [Documentación del programa](#31-documentación-del-programa-segura) |
+| 3.1.1 | [Variables de estado](#variables-de-estado) |
+| 3.1.2 | [getCharset() — Conjunto de caracteres](#getcharset----obtener-el-conjunto-de-caracteres) |
+| 3.1.3 | [caesarChar() — Cifrado César](#caesarchar----cifrado-césar-carácter-por-carácter) |
+| 3.1.4 | [atbashChar() — Cifrado Atbash](#atbashchar----cifrado-atbash-carácter-por-carácter) |
+| 3.1.5 | [process() — Procesar texto](#process----procesar-el-texto-completo) |
+| 3.1.6 | [updateMapping() — Vista previa](#updatemapping----vista-previa-del-mapeo) |
+| 3.1.7 | [setMethod() — Cambiar método](#setmethod----cambiar-entre-césar-y-atbash) |
+| 3.1.8 | [toggleAscii() — Modo ASCII](#toggleascii----modo-ascii-completo) |
+| 3.1.9 | [index.html — Estructura](#indexhtml----estructura) |
+| 3.1.10 | [styles.css — Diseño](#stylescss----diseño) |
+| 3.2 | [Programa web Kallie funcionando](#32-programa-web--kallie) |
+| 3.2.1 | [Descripción funcional](#321-descripción-funcional) |
+| 3.2.2 | [Algoritmos matemáticos](#322-algoritmos-matemáticos) |
+| 3.2.3 | [Instrucciones de uso](#323-cómo-usar-kallie) |
+| 3.2.4 | [Ejecución local](#324-cómo-ejecutar-localmente) |
+| 4 | [Conclusión](#-4-conclusión) |
+| 5 | [Bibliografía](#-5-bibliografía) |
 
 ---
 
@@ -440,7 +435,13 @@ body::after {
 
 ## 3.2 Programa Web — Kallie
 
-[![Kallie - Ver en vivo](https://jdmonteroa.github.io/Kallie-/)
+<div align="center">
+
+[![Ver Kallie en vivo](https://img.shields.io/badge/🔐%20Kallie-Ver%20en%20vivo-C9A84C?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jdmonteroa.github.io/Kallie-/)
+
+**https://jdmonteroa.github.io/Kallie-/**
+
+</div>
 
 ### 3.2.1 Descripción funcional
 
@@ -495,8 +496,8 @@ Es simétrico: la misma operación cifra y descifra.
 
 ### 3.2.4 Cómo ejecutar localmente
 ```bash
-git clone https://github.com/tu-usuario/kallie.git
-cd kallie
+git clone https://github.com/jdmonteroa/Kallie-.git
+cd Kallie-
 # Abre index.html en tu navegador — no requiere servidor ni instalación
 ```
 
@@ -542,8 +543,8 @@ Los cifrados César y Atbash tienen hoy valor **exclusivamente pedagógico**: pe
 
 ---
 
-| | |
-|---|---|
+| Campo | Datos |
+|:---:|:---:|
 | **Alumno** | Jesús David Montero Ayala |
 | **Carrera** | Ing. en Sistemas Computacionales |
 | **Semestre** | 8° — Grupo "B" |
