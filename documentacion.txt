@@ -1,0 +1,77 @@
+OCUMENTACIÓN DE FUNCIONES DEL SISTEMA DE CIFRADO
+
+1: getCharset Obtiene el conjunto de caracteres que el sistema utilizará
+para realizar el cifrado o descifrado. Si el modo ASCII está activado,
+genera dinámicamente todos los caracteres imprimibles del código ASCII
+(del 32 al 126). Si el modo ASCII está desactivado, obtiene el conjunto
+de caracteres desde el campo de entrada llamado “charset” en la interfaz
+HTML.
+
+2: setMethod Permite seleccionar el algoritmo de cifrado que se
+utilizará en el sistema. Puede ser el cifrado César o el cifrado Atbash.
+Además actualiza los elementos visuales de la interfaz para reflejar el
+método activo y posteriormente actualiza la información del sistema y el
+mapeo de caracteres.
+
+3: changeShift Modifica el valor del desplazamiento utilizado por el
+cifrado César. El desplazamiento se calcula mediante aritmética modular
+para asegurar que siempre permanezca dentro del rango válido del
+conjunto de caracteres definido. También actualiza los elementos
+visuales que muestran el valor actual del desplazamiento.
+
+4: syncShift Sincroniza el valor del desplazamiento con el control
+deslizante (slider) de la interfaz. Convierte el valor recibido a número
+entero y actualiza el valor de shift, además de actualizar la
+información del sistema y el mapeo de caracteres.
+
+5: toggleAscii Activa o desactiva el modo ASCII completo. Cuando se
+activa, el sistema utiliza todos los caracteres ASCII imprimibles como
+conjunto de cifrado y deshabilita el campo de entrada de caracteres
+personalizados. También modifica la apariencia visual del campo para
+indicar que está deshabilitado.
+
+6: updateInfo Actualiza la información del sistema mostrada en la
+interfaz. Calcula el tamaño del conjunto de caracteres (n), muestra el
+módulo utilizado en el cifrado y el método activo. También ajusta el
+rango permitido para el desplazamiento del cifrado César.
+
+7: updateMapping Genera una vista previa del mapeo de caracteres que
+muestra cómo se transforman los caracteres originales en caracteres
+cifrados. Dependiendo del método seleccionado (César o Atbash), calcula
+la transformación correspondiente y la muestra visualmente para
+facilitar la comprensión del proceso de cifrado.
+
+8: escHtml Función de seguridad que evita que caracteres especiales de
+HTML puedan ser interpretados como código dentro de la interfaz.
+Reemplaza caracteres como &, < y > por sus equivalentes seguros en HTML
+para prevenir problemas de renderizado o posibles inyecciones.
+
+9: caesarChar Realiza el cifrado o descifrado de un carácter utilizando
+el algoritmo de cifrado César. Busca la posición del carácter dentro del
+conjunto de caracteres y aplica un desplazamiento modular para obtener
+el nuevo carácter cifrado.
+
+10: atbashChar Aplica el algoritmo de cifrado Atbash a un carácter. Este
+método consiste en invertir la posición del carácter dentro del conjunto
+de caracteres, es decir, el primer carácter se convierte en el último,
+el segundo en el penúltimo, y así sucesivamente.
+
+11: process Función principal encargada de realizar el proceso completo
+de cifrado o descifrado de un texto. Recorre cada carácter del texto
+ingresado por el usuario y aplica el algoritmo seleccionado (César o
+Atbash). Finalmente muestra el resultado en la interfaz y genera una
+notificación indicando que la operación fue completada.
+
+12: clearAll Limpia todos los campos de entrada y salida del sistema.
+Elimina el texto ingresado por el usuario, borra el resultado del
+cifrado o descifrado y restablece el estado visual de la interfaz.
+
+13: copyResult Permite copiar el resultado generado por el sistema al
+portapapeles del navegador utilizando la API de Clipboard. Una vez
+copiado el texto, se muestra una notificación para informar al usuario
+que la operación fue realizada correctamente.
+
+14: showNotif Muestra un mensaje de notificación temporal en la interfaz
+del sistema. El mensaje aparece por un corto periodo de tiempo y luego
+desaparece automáticamente para no interferir con la interacción del
+usuario.
